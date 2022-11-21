@@ -75,6 +75,22 @@ form {
 }
 
 .button-panel .button {
+  background: orange;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background 0.3s ease-in-out;
+  width: 100%;
+ 
+}
+
+.button-panel .sub_button {
   background: #f16272;
   border: none;
   color: #fff;
@@ -91,7 +107,11 @@ form {
 }
 
 .button:hover {
-  background: #ee3e52;
+  background: rgb(224, 148, 5);
+}
+
+.button-panel .sub_button:hover {
+  background: #c02335;
 }
 
 .form-footer {
