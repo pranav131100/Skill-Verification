@@ -4,12 +4,21 @@ import { Link } from 'react-router-dom';
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import Axios from 'axios';
 import './SignIn.css'
+import {ethers} from 'ethers'
 
 
 
 const SignUp = (props) => {
-
-    
+  const[addr, setAddr] = useState('0x');
+  const handleClick = async () => {
+    const provider = new ethers.providers.Web3Provider(window.ethereum || '127.0.0.1:7545')
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner()
+    signer.getAddress()
+    .then(e => setAddr(e))
+    .catch(alert("Error while connecting to Metamask!!!"));
+  }
+   
 
     return (
         <>
@@ -35,6 +44,9 @@ const SignUp = (props) => {
   <option value="organization">Organization</option>
           <option value="individual">Individual</option>
 </select>
+          <div className="form-item">
+            <button onClick={handleClick}> <img src="client\src\metamask-fox.svg" alt="" /> Connect Metamask wallet</button>
+          </div>
           </div>
           <div className="button-panel">
             <input type="submit" className="button" title="Register" defaultValue="Register" />
