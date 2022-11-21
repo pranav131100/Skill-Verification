@@ -44,12 +44,13 @@ const SignUp = (props) => {
   <option value="organization">Organization</option>
           <option value="individual">Individual</option>
 </select>
-          <div className="form-item">
-            <button onClick={handleClick}> <img src="client\src\metamask-fox.svg" alt="" /> Connect Metamask wallet</button>
+          
           </div>
-          </div>
-          <div className="button-panel">
-            <input type="submit" className="button" title="Register" defaultValue="Register" />
+          <div className="button-panel" >
+          <button className = "button" onClick={handleClick}>  <img src="client\src\metamask-fox.svg" alt="" /> Connect Metamask wallet</button>
+            <br />
+            <br />
+            <input type="submit"   className="sub_button" title="Register" defaultValue="Register" />
           </div>
         </form>
         {/* <div className="form-footer">
