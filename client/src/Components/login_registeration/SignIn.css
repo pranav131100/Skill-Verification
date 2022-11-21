@@ -75,13 +75,13 @@ form {
 }
 
 .button-panel .button {
-  background: orange;
+  background: gray;
   border: none;
   color: #fff;
   cursor: pointer;
   height: 50px;
   font-family: 'Open Sans', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   letter-spacing: 0.05em;
   text-align: center;
   text-transform: uppercase;
@@ -91,7 +91,7 @@ form {
 }
 
 .button-panel .sub_button {
-  background: #f16272;
+  background: #ed3f54;
   border: none;
   color: #fff;
   cursor: pointer;
@@ -107,7 +107,7 @@ form {
 }
 
 .button:hover {
-  background: rgb(224, 148, 5);
+  background: rgb(72, 70, 65);
 }
 
 .button-panel .sub_button:hover {
